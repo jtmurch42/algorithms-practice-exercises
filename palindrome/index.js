@@ -5,11 +5,11 @@
 
 /**
  * Returns whether or not the string is a palindrome
- * @param {str} str
+ * @param {string} str
  * @returns {boolean}
  */
 function palindrome1(str) {
-  let reversedStr = '';
+  let reversedStr = "";
 
   for (char of str) {
     reversedStr = char + reversedStr;
@@ -20,15 +20,15 @@ function palindrome1(str) {
 
 /**
  * Returns whether or not the string is a palindrome
- * @param {str} str
+ * @param {string} str
  * @returns {boolean}
  */
 function palindrome2(str) {
-  const reversedStr = str.split('').reverse('').join('');
+  const reversedStr = str.split("").reverse("").join("");
   return reversedStr === str;
 }
 
 module.exports = {
   palindrome1,
-  palindrome2
+  palindrome2,
 };
