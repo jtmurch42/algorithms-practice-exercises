@@ -5,11 +5,10 @@
 // capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 /**
- * Returns a capitalized string
  * @return {string}
  * @param {string} str
  */
-function capitalize(str) {
+function capitalize1(str) {
   const words = [];
 
   for (let word of str.split(' ')) {
@@ -19,4 +18,25 @@ function capitalize(str) {
   return words.join(' ');
 }
 
-module.exports = capitalize;
+/**
+ * @return {string}
+ * @param {string} str
+ */
+function capitalize2(str) {
+  let result = str[0].toUpperCase();
+
+  for (let i = 1; i < str.length; i++) {
+    if (str[i - 1] === ' ') {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i];
+    }
+  }
+
+  return result;
+}
+
+module.exports = {
+  capitalize1,
+  capitalize2
+};

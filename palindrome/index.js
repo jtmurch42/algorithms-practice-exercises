@@ -1,11 +1,10 @@
 // Check to see if a string is a palindrome.
-// --- Examples:
+// --- Examples
 // palindrome("abba") === true
 // palindrome("abcdefg") === false
 
 /**
- * Returns whether or not the string is a palindrome
- * @param {str} str
+ * @param {string} str
  * @returns {boolean}
  */
 function palindrome1(str) {
@@ -19,8 +18,7 @@ function palindrome1(str) {
 }
 
 /**
- * Returns whether or not the string is a palindrome
- * @param {str} str
+ * @param {string} str
  * @returns {boolean}
  */
 function palindrome2(str) {
@@ -28,7 +26,18 @@ function palindrome2(str) {
   return reversedStr === str;
 }
 
+/**
+ * @param {string} str
+ * @returns {boolean}
+ */
+function palindrome3(str) {
+  return str.split('').every((char, index) => {
+    return char === str[str.length - index - 1];
+  });
+}
+
 module.exports = {
   palindrome1,
-  palindrome2
+  palindrome2,
+  palindrome3
 };

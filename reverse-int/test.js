@@ -8,8 +8,8 @@ describe('reverseInt', () => {
   });
 
   test('reverses negative integers', () => {
-    const result = reverseInt(-15);
+    const result = reverseInt(-500);
 
-    expect(result).toBe(-51);
+    expect(result).toBe(-5);
   });
 });

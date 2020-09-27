@@ -5,18 +5,17 @@
 // chunk([1, 2, 3, 4, 5], 2) --> [[1, 2], [3, 4], [5]]
 
 /**
- * Returns an array with subarrays
  * @param {any[]} array Array to chunk
  * @param {number} size Size to chunk array
  * @returns {any[]}
  */
-function chunk(array, size) {
+function chunk1(array, size) {
   const chunked = [];
 
   for (let element of array) {
     let last = chunked[chunked.length - 1];
 
-    if (!last || last.length == size) {
+    if (!last || last.length === size) {
       chunked.push([element]);
     } else {
       last.push(element);
@@ -26,4 +25,24 @@ function chunk(array, size) {
   return chunked;
 }
 
-module.exports = chunk;
+/**
+ * @param {any[]} array Array to chunk
+ * @param {number} size Size to chunk array
+ * @returns {any[]}
+ */
+function chunk2(array, size) {
+  const chunked = [];
+  let index = 0;
+
+  while (index < array.length) {
+    chunked.push(array.slice(index, index + size));
+    index += size;
+  }
+
+  return chunked;
+}
+
+module.exports = {
+  chunk1,
+  chunk2
+};

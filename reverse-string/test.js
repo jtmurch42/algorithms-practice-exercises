@@ -1,6 +1,4 @@
-const reverseStrFunctions = require('./index');
-const reverseStr1 = reverseStrFunctions.reverseStr1;
-const reverseStr2 = reverseStrFunctions.reverseStr2;
+const { reverseStr1, reverseStr2, reverseStr3 } = require('./index');
 
 describe('reverseStr1', () => {
   test('reverses string', () => {
@@ -15,5 +13,13 @@ describe('reverseStr2', () => {
     const result = reverseStr2('world');
 
     expect(result).toEqual('dlrow');
+  });
+});
+
+describe('reverseSt3', () => {
+  test('reverses string', () => {
+    const result = reverseStr3('good day');
+
+    expect(result).toEqual('yad doog');
   });
 });

@@ -18,7 +18,7 @@
 /**
  * @param {number} n
  */
-function steps(n) {
+function steps1(n) {
   for (let row = 0; row < n; row++) {
     let stairs = '';
 
@@ -34,4 +34,31 @@ function steps(n) {
   }
 }
 
-module.exports = steps;
+/**
+ * Recursive solution
+ * @param {number} n
+ */
+function steps2(n, row = 0, stair = '') {
+  if (n === row) {
+    return;
+  }
+
+  if (n === stair.length) {
+    console.log(stair);
+    steps2(n, row + 1);
+    return;
+  }
+
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+
+  steps2(n, row, stair);
+}
+
+module.exports = {
+  steps1,
+  steps2
+};

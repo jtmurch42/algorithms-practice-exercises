@@ -7,12 +7,11 @@
 // anagrams('Hi there', 'Bye there') --> false
 
 /**
- * Returns whether or not stringA and stringB are anagrams of each other
  * @param {string} stringA
  * @param {string} stringB
  * @return {boolean}
  */
-function anagrams(stringA, stringB) {
+function anagrams1(stringA, stringB) {
   // Remove punctuations and spaces from strings, then lowercase the strings
   const string1 = stringA.replace(/[^\w]/g, '').toLowerCase();
   const string2 = stringB.replace(/[^\w]/g, '').toLowerCase();
@@ -48,4 +47,23 @@ function buildCharMap(str) {
   return stringCharMap;
 }
 
-module.exports = anagrams;
+/**
+ * @param {string} stringA
+ * @param {string} stringB
+ * @return {boolean}
+ */
+function anagrams2(stringA, stringB) {
+  // Remove punctuations and spaces from strings, then lowercase the strings
+  const string1 = stringA.replace(/[^\w]/g, '').toLowerCase();
+  const string2 = stringB.replace(/[^\w]/g, '').toLowerCase();
+
+  const string1Sorted = string1.split('').sort().join('');
+  const string2Sorted = string2.split('').sort().join('');
+
+  return string1Sorted === string2Sorted;
+}
+
+module.exports = {
+  anagrams1,
+  anagrams2
+};

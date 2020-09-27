@@ -3,7 +3,6 @@
 // maxChar("abcccccccd") === "c"
 
 /**
- * Retruns the character most used in a string
  * @param {string} str
  * @returns {string}
  */

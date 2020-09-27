@@ -1,7 +1,6 @@
 // Return a new string with the reversed order of characters.
 
 /**
- * Returns the reversed string
  * @param {string} str
  * @returns {string}
  */
@@ -10,7 +9,6 @@ function reverseStr1(str) {
 }
 
 /**
- * Returns the reversed string
  * @param {string} str
  * @returns {string}
  */
@@ -24,7 +22,18 @@ function reverseStr2(str) {
   return reversed;
 }
 
+/**
+ * @param {string} str
+ * @returns {string}
+ */
+function reverseStr3(str) {
+  return str.split('').reduce((reversed, char) => {
+    return char + reversed;
+  }, '');
+}
+
 module.exports = {
   reverseStr1,
-  reverseStr2
+  reverseStr2,
+  reverseStr3
 };
