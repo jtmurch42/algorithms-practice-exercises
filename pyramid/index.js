@@ -1,5 +1,5 @@
 /**
- * Function that accepts a positibe number N.
+ * Function that accepts a positive number N.
  * The funciton should console.log a pyramid shape with N levels
  * using the # character.
  *
