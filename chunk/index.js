@@ -7,7 +7,7 @@
 /**
  * @param {any[]} array Array to chunk
  * @param {number} size Size to chunk array
- * @returns {any[]}
+ * @returns {any[][]}
  */
 function chunk1(array, size) {
   const chunked = [];
@@ -28,7 +28,7 @@ function chunk1(array, size) {
 /**
  * @param {any[]} array Array to chunk
  * @param {number} size Size to chunk array
- * @returns {any[]}
+ * @returns {any[][]}
  */
 function chunk2(array, size) {
   const chunked = [];
