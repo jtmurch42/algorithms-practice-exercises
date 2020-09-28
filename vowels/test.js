@@ -8,7 +8,7 @@ describe('vowels1', () => {
   });
 
   test('returns 0', () => {
-    const result = vowels2('bcdf');
+    const result = vowels1('bcdf');
 
     expect(result).toEqual(0);
   });
